@@ -1,58 +1,52 @@
 public class Producto {
 
-    double weight;
-    double length;
-    double profundity;
-    double tall;
-    double typeProduct;
 
-    public Producto(double peso, double largo, double profundida, double alto, double typeProduct) {
-        this.weight = weight;
-        this.length = length;
-        this.profundity = profundity;
-        this.tall = tall;
-        this.typeProduct = typeProduct;
+    private double peso;
+    private Dimension dimension;
+    private String nombre;
+    private boolean fragil;
+
+    Producto(double peso,Dimension dimension , String nombre, boolean fragil){
+        setPeso(peso);
+        setDimension(dimension);
+        setNombre(nombre);
+        setFragil(fragil);
     }
 
-
     public double getPeso() {
-        return weight;
+        return peso;
     }
 
     public void setPeso(double peso) {
-        this.weight = peso;
+        this.peso = peso;
     }
 
-    public double getLargo() {
-        return length;
+    public Dimension getDimension() {
+        return dimension;
     }
 
-    public void setLargo(double largo) {
-        this.length = largo;
+    public void setDimension(Dimension dimension) {
+        this.dimension = dimension;
     }
 
-    public double getProfundity() {
-        return profundity;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setProfundity(double profundity) {
-        this.profundity = profundity;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public double getAlto() {
-        return tall;
+    public boolean isFragil() {
+        return fragil;
     }
 
-    public void setAlto(double alto) {
-        this.tall = alto;
-    }
-    public double getTypeProduct() {
-        return typeProduct;
+    public void setFragil(boolean fragil) {
+        this.fragil = fragil;
     }
 
-    public void setTypeProduct(double typeProduct) {
-        this.typeProduct = typeProduct;
-    }
+
+
 
 
 
