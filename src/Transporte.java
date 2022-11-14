@@ -2,14 +2,14 @@ import java.util.ArrayList;
 
 public class Transporte {
 
-    private ArrayList<Transporte> transportables;
+    private ArrayList<Producto> transportables;
     private double capacidadMaxima;
     private double capacida;
     private Dimension dimension;
     private int cantidadMaxima;
 
    public Transporte(double capacidadMaxima,Dimension dimension, int cantidadMaxima){
-        setTransportables(new ArrayList<Transporte>());
+        setTransportables(new ArrayList<Producto>());
         setCapacida(0);
         setCantidadMaxima(cantidadMaxima);
         setDimension(dimension);
@@ -18,11 +18,11 @@ public class Transporte {
 
 
 
-    public ArrayList<Transporte> getTransportables() {
+    public ArrayList<Producto> getTransportables() {
         return transportables;
     }
 
-    public void setTransportables(ArrayList<Transporte> transportables) {
+    public void setTransportables(ArrayList<Producto> transportables) {
         this.transportables = transportables;
     }
 
@@ -56,6 +56,11 @@ public class Transporte {
 
     public void setCantidadMaxima(int cantidadMaxima) {
         this.cantidadMaxima = cantidadMaxima;
+    }
+
+    public void cargar(Producto transportable){
+       if (getTransportables().size() >= getCantidadMaxima() ) return;
+       getTransportables().add(transportable);
     }
 
 

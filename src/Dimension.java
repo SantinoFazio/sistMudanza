@@ -3,9 +3,12 @@ public class Dimension {
 
     double altura;
     double profundidad;
+
+
+
     double ancho;
 
-    public Dimension(double altura, double profundidad, double alto) {
+    public Dimension(double altura, double profundidad, double ancho) {
         setAltura(altura);
         setProfundidad(profundidad);
         setAncho(ancho);
@@ -34,7 +37,6 @@ public class Dimension {
     public void setAncho(double ancho) {
         this.ancho = ancho;
     }
-
 
 
 
