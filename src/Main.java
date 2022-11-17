@@ -34,6 +34,13 @@ public class Main {
         camion1.cargar(tv);
         camion1.cargar(mesa);
 
+        camion1.descargar(play5);
+        camion1.descargar(sillaGamer);
+        camion1.descargar(tv);
+
+
+        camion1.mostrar();
+
     }
 
 }

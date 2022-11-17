@@ -59,8 +59,23 @@ public class Transporte {
     }
 
     public void cargar(Producto transportable){
-       if (getTransportables().size() >= getCantidadMaxima() ) return;
+       if (getTransportables().size() >= getCantidadMaxima() ) {
+           System.out.println("maximo 3 productos,productos cargados:");
+           return;
+       }
        getTransportables().add(transportable);
+    }
+    public void descargar(Producto transportable){
+            System.out.println("producto descargado " + transportable.getNombre());
+        getTransportables().remove(transportable);
+    }
+
+
+    public void mostrar(){
+        for (int i = 0; i < getTransportables().size() ; i++) {
+            getTransportables().get(i).getNombre();
+            System.out.println( getTransportables().get(i).getNombre());
+        }
     }
 
 
